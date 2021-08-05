@@ -19,7 +19,7 @@
     <div id="app">加载中</div>
     <script>
       window.$docsify = {
-        repo: "https://github.com/docsifyjs/docsify/", //GITHUB顶部
+        repo: 'https://github.com/docsifyjs/docsify/', //GITHUB顶部
         name: '<span style="color:#FED55F;">Vue知识点</span>',
         loadSidebar: true,
         subMaxLevel: 2,
@@ -33,43 +33,60 @@
           responsiveTables: true, // default
         },
 
-        search: "auto", // 默认值
+        search: 'auto', // 默认值
 
         search: [
-          "/", // => /README.md
-          "/pages/index.md", // => /pages/index.md
-          "/peizhi/peizhi.md", // => /peizhi/peizhi.md
-          "/coverpage/index.md", // => /coverpage/index.md
+          '/', // => /README.md
+          '/zujiandata/zujiandata.md', // => /pages/index.md
+          '/zujian/zujian.md', // => /peizhi/peizhi.md
+          '/Vuex/vuex.md', // => /coverpage/index.md
+          '/vuedonghua/donghua.md',
+          '/VueBasiczhiling/vuezhiling.md',
+          '/vue3watch/vue3watch.md',
+          '/Vue3Vuex/vue3vuex.md',
+          '/vue3teleport/vue3teleport.md',
+          '/vue3setupandref/vue3setupandref.md',
+          '/vue3reactivetorefs/vue3reactivetorefs.md',
+          '/vue3props/vue3props.md',
+          '/vue3modules/vue3modules.md',
+          '/vue3luyou/vue3luyou.md',
+          '/vue3life/vue3life.md',
+          '/vue3kacao/vue3kacao.md',
+          '/Vue2kacao/vue2kacao.md',
+          '/vue2Computedwatch/vue2ComputedandWatch.md',
+          '/luyoucanshu/luyoucanshu.md',
+          '/luyou/luyou.md',
+          '/lifetime/lifetime.md',
         ],
 
         // 完整配置参数
         search: {
           maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-          paths: "auto", // or 'auto'
-          placeholder: "搜索",
-          noData: "No Results!",
+          paths: 'auto', // or 'auto'
+          placeholder: '搜索',
+          noData: 'No Results!',
           // 搜索标题的最大层级, 1 - 6
           depth: 2,
 
           hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
           //代码复制
           copyCode: {
-            buttonText: "点击复制",
-            errorText: "复制错误",
-            successText: "复制成功",
+            buttonText: '点击复制',
+            errorText: '复制错误',
+            successText: '复制成功',
           },
           //字数统计
           count: {
             countable: true,
-            fontsize: "0.9em",
-            color: "rgb(90,90,90)",
-            language: "chinese",
+            fontsize: '0.9em',
+            color: 'rgb(90,90,90)',
+            language: 'chinese',
           },
           //标签页
           tabs: {
             persist: true, // default
             sync: true, // default
-            theme: "classic", // default
+            theme: 'classic', // default
             tabComments: true, // default
             tabHeadings: true, // default
           },
@@ -107,7 +124,7 @@
       --docsifytabs-tab-color: #999;
       --docsifytabs-tab-color--active: #ffe793;
     }
-    .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
+    .markdown-section code:not([class*='lang-']):not([class*='language-']) {
       color: #ffe793;
     }
     .markdown-section h1 a[data-id]:hover {
