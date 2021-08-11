@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import Header from "@/components/common/Header";
-  import Chacaoa from "@/components/common/Sloata";
+  import Header from '@/components/common/Header';
+  import Chacaoa from '@/components/common/Sloata';
   export default {
     data() {
       return {
-        message: "首页",
+        message: '首页',
       };
     },
     components: {
@@ -58,9 +58,9 @@
   export default {
     data() {
       return {
-        message: "子组件",
-        dataA: "dataA里面的数据",
-        dataB: "dataB里面的数据",
+        message: '子组件',
+        dataA: 'dataA里面的数据',
+        dataB: 'dataB里面的数据',
       };
     },
   };
@@ -92,12 +92,12 @@
 </template>
 
 <script>
-  import Header from "@/components/common/Header";
-  import Chacaoa from "@/components/common/Sloata";
+  import Header from '@/components/common/Header';
+  import Chacaoa from '@/components/common/Sloata';
   export default {
     data() {
       return {
-        message: "首页",
+        message: '首页',
       };
     },
     components: {
@@ -171,12 +171,12 @@
 </template>
 
 <script>
-  import Header from "@/components/common/Header";
-  import Chacaoa from "@/components/common/Sloata";
+  import Header from '@/components/common/Header';
+  import Chacaoa from '@/components/common/Sloata';
   export default {
     data() {
       return {
-        message: "首页",
+        message: '首页',
       };
     },
     components: {
@@ -207,47 +207,22 @@
 ```html
 <template>
   <div>
-    <header></header>
-    {{ message }}
-    <Chacaoa>
-      <div class="sloata" slot="kaocaoa" slot-scope="shuju1">
-        <p>{{ shuju1.data }}</p>
-      </div>
-      <div class="sloatb" slot="kaocaob" slot-scope="shuju2">
-        <p>{{ shuju2.data }}</p>
-      </div>
-    </Chacaoa>
+    <slot name="kaocaoa" :data="dataA"></slot>
+    <slot name="kaocaob" :data="dataB"></slot>
   </div>
 </template>
 
 <script>
-  import Header from "@/components/common/Header";
-  import Chacaoa from "@/components/common/Sloata";
   export default {
     data() {
       return {
-        message: "首页",
+        message: '子组件',
+        dataA: 'dataA里面的数据',
+        dataB: 'dataB里面的数据',
       };
-    },
-    components: {
-      Header,
-      Chacaoa,
     },
   };
 </script>
 
-<style lang="less" scoped>
-  .sloata {
-    width: 300px;
-    height: 100px;
-    background: blue;
-    color: yellow;
-  }
-  .sloatb {
-    width: 300px;
-    height: 100px;
-    background: red;
-    color: black;
-  }
-</style>
+<style lang="less" scoped></style>
 ```
